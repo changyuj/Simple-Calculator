@@ -1,3 +1,5 @@
+import math
+
 # --- Arithmetic Functions ---
 
 def add(x,y):
@@ -15,6 +17,18 @@ def multiply(x,y):
 def divide(x,y):
     """return the division of two numbers."""
     return x / y
+
+def square(x):
+    """return the square of first number"""
+    return x ** 2
+
+def power(x,y):
+    """return x raised to the power of y"""
+    return x ** y
+
+def square_root(x):
+    """return square root of x"""
+    return x ** 0.5
 
 # --- User Interaction Functions ---
 
@@ -42,15 +56,22 @@ def main():
         print("2. Subtract (-)")
         print("3. Multiply (*)")
         print("4. Divide (/)")
-        print("5. Exit")
+        print("5. Squared (^2)")
+        print("6. Exponent (^y)")
+        print("7. Square root (√)")
+        print("8. Exit")
         
-        choice = input("Enter choice(1/2/3/4/5): ")
+        choice = input("Enter choice(1/2/3/4/5/6/7/8): ")
         
-        if choice == '5':
+        if choice == '8':
             print("Exiting calculator. Goodbye!")
             break
+        elif choice == '5':
+            print(f"{number1} ^2 = {square(number1):.2f}")
+        elif choice == '7':
+            print(f"√{number1} = {square_root(number1):.2f}")
         
-        if choice in ('1', '2', '3', '4'):
+        elif choice in ('1', '2', '3', '4','6'):
             number2 = get_input("Enter the second number: ")
             
             if choice == '1':
@@ -65,6 +86,9 @@ def main():
                     print("Error: cannot divide by zero!")
                 else:
                     print(f"{number1} + {number2} = {divide(number1, number2):.2f}")  
+            elif choice == '6':
+                print(f"{number1} ^ {number2} = {power(number1,number2):.2f}")
+                
         else:
             print("Invalid input. Please enter a valid number.")
             
