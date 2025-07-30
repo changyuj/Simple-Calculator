@@ -1,4 +1,5 @@
 from tkinter import *
+import math
 
 # --- press button and display ---
 def buton_press(num):
@@ -29,6 +30,25 @@ def equals():
          equation_label.set("Syntax error!") 
          equation_text = "" 
 
+# --- square root the input ---
+def square_root():
+    
+    global equation_text
+    
+    total = math.sqrt(float(equation_text))
+    equation_label.set(str(total)) #display the total on screen
+    equation_text = "" #set text to empty
+
+# --- square the input ---
+def squared():
+    
+    global equation_text
+    
+    total = pow(float(equation_text),2)
+    equation_label.set(str(total)) #display the total on screen
+    equation_text = "" #set text to empty
+    
+    
 # --- clearing display ---
 
 def clear():
@@ -41,7 +61,7 @@ def clear():
 
 window = Tk()
 window.title("Simple Calculaor program")
-window.geometry("500x600")
+window.geometry("600x600")
 
 equation_text = ""
 
@@ -82,6 +102,12 @@ button9.grid(row=2,column=2)
 
 button0 = Button(frame, text=0, height=4, width=9, font=35, command=lambda: buton_press(0))
 button0.grid(row=3,column=0)
+
+squared = Button(frame, text='x²', height=4, width=9, font=35, command=squared)
+squared.grid(row=0,column=4)
+
+square_root = Button(frame, text='√', height=4, width=9, font=35, command=square_root)
+square_root.grid(row=1,column=4)
 
 plus = Button(frame, text='+', height=4, width=9, font=35, command=lambda: buton_press('+'))
 plus.grid(row=0,column=3)
