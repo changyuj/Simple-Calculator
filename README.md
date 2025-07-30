@@ -51,10 +51,10 @@ Follow the prompts to enter numbers and choose an operation. The calculator will
 
 ## Future Enhancements (Ideas for later!)
 
-* Develop a graphical user interface (GUI).
-* Add more complex operations (e.g., modulo, exponentiation).
+✓ Develop a graphical user interface (GUI).
+✓ Add more complex operations (e.g., modulo, exponentiation).
 * Implement order of operations (PEMDAS/BODMAS).
-* Allow continuous calculations without restarting.
+✓ Allow continuous calculations without restarting.
 * Add a history of calculations.
 
 ---
