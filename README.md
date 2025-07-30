@@ -1,7 +1,7 @@
 # Simple-Calculator
 a simple cli or gui calculator
 # Simple Command-Line Calculator 
-# Simple GUI Calculator (branch?)
+# Simple GUI Calculator (branch)
 
 A straightforward Python-based command-line calculator that performs basic arithmetic operations: addition, subtraction, multiplication, and division.
 
@@ -39,7 +39,7 @@ A straightforward Python-based command-line calculator that performs basic arith
 
 ### Commands
 
-Follow the prompts to enter numbers and choose an operation. The calculator will display the result or an error message if the input is invalid.
+press button to use the calculator
 
 ---
 
